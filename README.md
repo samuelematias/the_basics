@@ -1,16 +1,34 @@
-# the_basics
+<!-- header section -->
+<p align="center">
+  <img src="https://i.imgur.com/0R9vUPQ.png" /><br/>
+  <span><b>Flutter Web - The basics</b></span><br/>
+  <a href="https://thebasics-a8d4b.web.app/#/">Access the app</a>
+</p>
+<!-- header section END -->
 
-A new Flutter project.
+<br/>
+<!-- show case/gif section -->
 
-## Getting Started
+<!-- show case/gif section END -->
 
-This project is a starting point for a Flutter application.
+<br/>
 
-A few resources to get you started if this is your first Flutter project:
+<!-- about app and course section -->
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## About this app 🗣
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This app was developed from the tutorial [How to build a Flutter Website](https://www.youtube.com/playlist?list=PLdTodMosi-Bxf___3xPh3_NS-on4dc0sJ) by [Dane Mackier (Filledstacks)](https://www.filledstacks.com/).<br/><br/>
+This app is a set of basic features to use in Flutter for web.
+
+## Tutorial 📖 / Branch 📦
+
+- Building a Website In Flutter - Flutter Web Beginners Tutorial: [Tutorial](https://www.youtube.com/watch?v=33kyEzDMTZU&list=PLdTodMosi-Bxf___3xPh3_NS-on4dc0sJ&index=1) / [Branch](https://github.com/samuelematias/the_basics/tree/tutorial-1/how-to-build-a-flutter-website).
+
+## Tech Stack 👩🏾‍💻
+
+- [Dart](https://dart.dev/)
+- [Flutter](https://flutter.dev/)
+
+<br/>
+
+<!-- about app and course section END -->
