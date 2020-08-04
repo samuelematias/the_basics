@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_basics/widgets/navigation_bar/navbar_logo.dart';
 
 class NavigationBarMobile extends StatelessWidget {
-  const NavigationBarMobile({Key key, this.scaffoldKey}) : super(key: key);
-
-  final GlobalKey<ScaffoldState> scaffoldKey;
+  const NavigationBarMobile({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +13,9 @@ class NavigationBarMobile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {
-                scaffoldKey?.currentState?.openDrawer();
-              }),
+            icon: Icon(Icons.menu),
+            onPressed: () {},
+          ),
           NavBarLogo()
         ],
       ),

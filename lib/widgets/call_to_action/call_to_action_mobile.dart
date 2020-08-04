@@ -12,7 +12,6 @@ class CallToActionMobile extends StatelessWidget {
       alignment: Alignment.center,
       child: Text(
         title,
-        textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.w800,
