@@ -1,29 +1,35 @@
 import 'package:flutter/widgets.dart';
 import 'package:the_basics/datamodels/episode_item_model.dart';
+import 'package:the_basics/locator.dart';
+import 'package:the_basics/services/api.dart';
 
 class EpisodesViewModel extends ChangeNotifier {
-  final episodes = [
-    EpisodeItemModel(
-      title: 'Setup, Build and Deploy',
-      duration: 14.07,
-      imageUrl: _imgUrl(code: 'wjbnIqr'),
-    ),
-    EpisodeItemModel(
-      title: 'Adding a Responsive UI',
-      duration: 18.54,
-      imageUrl: _imgUrl(code: 'ECEcsm8'),
-    ),
-    EpisodeItemModel(
-      title: 'Layout Templates',
-      duration: 14.55,
-      imageUrl: _imgUrl(code: 'MfkOfXP'),
-    ),
-    EpisodeItemModel(
-      title: 'State Management and Api integration',
-      duration: 14.55,
-      imageUrl: _imgUrl(code: '8Ht3kGi'),
-    ),
-  ];
-}
+  final _api = locator<Api>();
 
-String _imgUrl({@required String code}) => "https://i.imgur.com/$code.png";
+  List<EpisodeItemModel> _episodes;
+  List<EpisodeItemModel> get episodes => _episodes;
+
+  bool _busy;
+  bool get busy => _busy;
+
+  String _errorMessage;
+  String get errorMessage => _errorMessage;
+
+  Future getEpisodes() async {
+    _setBusy(true);
+    var episodesResuls = await _api.getEpisodes();
+
+    if (episodesResuls is String) {
+      _errorMessage = episodesResuls;
+    } else {
+      _episodes = episodesResuls;
+    }
+
+    _setBusy(false);
+  }
+
+  void _setBusy(bool value) {
+    _busy = value;
+    notifyListeners();
+  }
+}
