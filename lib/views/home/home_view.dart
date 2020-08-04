@@ -6,11 +6,19 @@ import 'package:the_basics/widgets/centered_view/centered_view.dart';
 import 'package:the_basics/widgets/navigation_bar/navigation_bar.dart';
 import 'package:the_basics/widgets/navigation_drawer/navigation_drawer.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
+  @override
+  _HomeViewState createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Scaffold(
+        key: _scaffoldKey,
         drawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile
             ? NavigationDrawer()
             : null,
@@ -18,7 +26,9 @@ class HomeView extends StatelessWidget {
         body: CenteredView(
           child: Column(
             children: <Widget>[
-              NavigationBar(),
+              NavigationBar(
+                scaffoldKey: _scaffoldKey,
+              ),
               Expanded(
                 child: ScreenTypeLayout(
                   mobile: HomeContentMobile(),
