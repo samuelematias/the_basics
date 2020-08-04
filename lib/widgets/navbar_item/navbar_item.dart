@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:the_basics/datamodels/navbar_item_model.dart';
 import 'package:the_basics/locator.dart';
@@ -25,12 +26,11 @@ class NavBarItem extends StatelessWidget {
         // SERVICES SHOULD ONLY BE USED FROM A VIEWMODEL
         locator<NavigationService>().navigateTo(navigationPath);
       },
-      child: ScreenTypeLayout(
-        tablet: NavBarItemTabletDesktop(
-          model: model,
-        ),
-        mobile: NavBarItemMobile(
-          model: model,
+      child: Provider.value(
+        value: model,
+        child: ScreenTypeLayout(
+          tablet: NavBarItemTabletDesktop(),
+          mobile: NavBarItemMobile(),
         ),
       ),
     );
