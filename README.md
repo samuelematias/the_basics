@@ -2,7 +2,7 @@
 <p align="center">
   <img src="https://i.imgur.com/0R9vUPQ.png" /><br/>
   <span><b>Flutter Web - The basics</b></span><br/>
-  <a href="https://thebasics-a8d4b.web.app/#/" target="_blank">Access the app</a>
+  <a target="_blank" rel="noopener noreferrer" href="https://thebasics-a8d4b.web.app/#/">Access the app</a>
 </p>
 <!-- header section END -->
 
