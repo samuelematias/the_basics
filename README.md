@@ -26,6 +26,8 @@ This app is a set of basic features to use in Flutter for web.
 
 - A Responsive Flutter Website Guide | Flutter Web Tutorial - Part 2: [Tutorial](https://www.youtube.com/watch?v=Kl69yxukBdw&list=PLdTodMosi-Bxf___3xPh3_NS-on4dc0sJ&index=2) / [Branch](https://github.com/samuelematias/the_basics/tree/tutorial-2/how-to-build-a-flutter-website).
 
+- Template Layouts and Navigation for Flutter Web - Flutter Web Part 3: [Tutorial](https://www.youtube.com/watch?v=nw2c6YI1Sb8&list=PLdTodMosi-Bxf___3xPh3_NS-on4dc0sJ&index=3) / [Branch](https://github.com/samuelematias/the_basics/tree/tutorial-3/how-to-build-a-flutter-website).
+
 ## Tech Stack 👩🏾‍💻
 
 - [Dart](https://dart.dev/)
@@ -34,7 +36,6 @@ This app is a set of basic features to use in Flutter for web.
 ## Plugins 📟
 
 - [responsive_builder](https://pub.dev/packages/responsive_builder)
-
-<br/>
+- [get_it](https://pub.dev/packages/get_it)
 
 <!-- about app and course section END -->
