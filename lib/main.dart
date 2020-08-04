@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:the_basics/locator.dart';
 import 'package:the_basics/views/layout_template/layout_template.dart';
+
+import 'locator.dart';
 
 void main() {
   setupLocator();
@@ -14,10 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        textTheme: Theme.of(context).textTheme.apply(
-              fontFamily: 'Open Sans',
-            ),
+        textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Open Sans'),
       ),
       home: LayoutTemplate(),
     );
