@@ -16,12 +16,15 @@ class NavigationDrawerHeader extends StatelessWidget {
           Text(
             'SKILL UP NOW',
             style: TextStyle(
-                fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white),
+              fontSize: 18,
+              fontWeight: FontWeight.w800,
+              // color: Colors.white,
+            ),
           ),
           Text(
             'TAP HERE',
             style: TextStyle(
-              color: Colors.white,
+              // color: Colors.white,
             ),
           )
         ],

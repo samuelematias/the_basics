@@ -22,7 +22,7 @@ class EpisodesList extends StatelessWidget {
               .asMap()
               .map((index, episode) => MapEntry(
                     index,
-                    GestureDetector(
+                    InkResponse(
                       child: EpisodeItem(model: episode),
                       onTap: () => model.navigateToEpisode(index),
                     ),

@@ -20,7 +20,7 @@ class NavBarItem extends StatelessWidget {
       navigationPath: navigationPath,
       iconData: icon,
     );
-    return GestureDetector(
+    return InkWell(
       onTap: () {
         // DON'T EVER USE A SERVICE DIRECTLY IN THE UI TO CHANGE ANY KIND OF STATE
         // SERVICES SHOULD ONLY BE USED FROM A VIEWMODEL
