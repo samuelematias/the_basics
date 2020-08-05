@@ -2,7 +2,7 @@ name: Flutter - Build and Deploy on Firebase Hosting (CD)
 on:
   push:
     branches:
-      - develop
+      - main
 jobs:
   deploy_to_firebase_hosting:
     runs-on: ubuntu-latest
