@@ -18,13 +18,13 @@ class NavigationDrawerHeader extends StatelessWidget {
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w800,
-              // color: Colors.white,
+              color: Colors.white,
             ),
           ),
           Text(
             'TAP HERE',
             style: TextStyle(
-              // color: Colors.white,
+              color: Colors.white,
             ),
           )
         ],

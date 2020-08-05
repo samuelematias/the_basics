@@ -11,7 +11,6 @@ class EpisodeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      // color: Colors.white,
       elevation: 2,
       child: SizedBox(
         width: 360,
