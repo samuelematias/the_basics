@@ -32,6 +32,8 @@ This app is a set of basic features to use in Flutter for web.
 
 - Hover Effects in Flutter Web Using Flutter Extensions: [Tutorial](https://www.youtube.com/watch?v=VABcKZLpvyg&list=PLdTodMosi-Bxf___3xPh3_NS-on4dc0sJ&index=5) / [Branch](https://github.com/samuelematias/the_basics/tree/tutorial-5/how-to-build-a-flutter-website).
 
+- Advance Url Navigation for Flutter Web: [Tutorial](https://www.youtube.com/watch?v=q-n1Q98s92s&list=PLdTodMosi-Bxf___3xPh3_NS-on4dc0sJ&index=6) / [Branch](https://github.com/samuelematias/the_basics/tree/tutorial-6/how-to-build-a-flutter-website).
+
 ## Tech Stack 👩🏾‍💻
 
 - [Dart](https://dart.dev/)
