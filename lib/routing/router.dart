@@ -5,9 +5,12 @@ import 'package:the_basics/views/about/about_view.dart';
 import 'package:the_basics/views/episode_details/episode_details.dart';
 import 'package:the_basics/views/episodes/episodes_view.dart';
 import 'package:the_basics/views/home/home_view.dart';
+import 'package:the_basics/extensions/string_extensions.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
-  switch (settings.name) {
+  var routingData = settings.name.getRoutingData; // Get the routing Data
+  switch (routingData.route) {
+    // Switch on the path from the data
     case HomeRoute:
       return _getPageRoute(HomeView(), settings);
     case AboutRoute:
@@ -15,7 +18,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case EpisodesRoute:
       return _getPageRoute(EpisodesView(), settings);
     case EpisodeDetailsRoute:
-      return _getPageRoute(EpisodeDetails(), settings);
+      var id = int.tryParse(routingData['id']); // Get the id from the data.
+      return _getPageRoute(EpisodeDetails(id: id), settings);
     default:
       return _getPageRoute(HomeView(), settings);
   }
