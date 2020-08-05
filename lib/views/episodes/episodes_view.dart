@@ -32,7 +32,7 @@ class EpisodesView extends StatelessWidget {
             height: 50,
           ),
           model.episodes == null
-              ? CircularProgressIndicator()
+              ? Center(child: CircularProgressIndicator())
               : EpisodesList(episodes: model.episodes),
         ],
       )),
