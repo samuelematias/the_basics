@@ -10,14 +10,19 @@ class LayoutTemplate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _scaffoldKey = GlobalKey<ScaffoldState>();
+
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Scaffold(
+        key: _scaffoldKey,
         drawer: sizingInformation.isMobile ? NavigationDrawer() : null,
         backgroundColor: Colors.white,
         body: CenteredView(
           child: Column(
             children: <Widget>[
-              NavigationBar(),
+              NavigationBar(
+                scaffoldKey: _scaffoldKey,
+              ),
               Expanded(
                 child: child,
               )
