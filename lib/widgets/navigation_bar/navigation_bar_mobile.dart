@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:the_basics/widgets/navigation_bar/navbar_logo.dart';
 
 class NavigationBarMobile extends StatelessWidget {
   const NavigationBarMobile({Key key, this.scaffoldKey}) : super(key: key);
@@ -20,7 +19,6 @@ class NavigationBarMobile extends StatelessWidget {
               scaffoldKey?.currentState?.openDrawer();
             },
           ),
-          NavBarLogo()
         ],
       ),
     );
