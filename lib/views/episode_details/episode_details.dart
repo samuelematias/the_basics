@@ -23,7 +23,7 @@ class EpisodeDetails extends StatelessWidget {
             model.episode == null
                 ? Container()
                 : SizedBox(
-                    height: 320,
+                    height: 220,
                     child: FadeInImage.assetNetwork(
                       placeholder:
                           'assets/img-placeholder.png', // Before image load
