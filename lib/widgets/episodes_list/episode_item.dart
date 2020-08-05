@@ -14,7 +14,7 @@ class EpisodeItem extends StatelessWidget {
       color: Colors.white,
       elevation: 2,
       child: SizedBox(
-        width: 320,
+        width: 360,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -22,7 +22,7 @@ class EpisodeItem extends StatelessWidget {
               height: 180,
               child: Image.network(
                 model.imageUrl,
-                fit: BoxFit.fitWidth,
+                fit: BoxFit.cover,
               ),
             ),
             Padding(

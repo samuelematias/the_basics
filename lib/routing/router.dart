@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:the_basics/routing/route_names.dart';
 import 'package:the_basics/views/about/about_view.dart';
+import 'package:the_basics/views/episode_details/episode_details.dart';
 import 'package:the_basics/views/episodes/episodes_view.dart';
 import 'package:the_basics/views/home/home_view.dart';
 
@@ -13,6 +14,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(AboutView(), settings);
     case EpisodesRoute:
       return _getPageRoute(EpisodesView(), settings);
+    case EpisodeDetailsRoute:
+      return _getPageRoute(EpisodeDetails(), settings);
     default:
       return _getPageRoute(HomeView(), settings);
   }
