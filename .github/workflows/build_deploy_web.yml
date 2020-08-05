@@ -1,0 +1,29 @@
+name: Flutter - Build and Deploy on Firebase Hosting (CD)
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy_to_firebase_hosting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+      - name: Setup flutter
+        uses: subosito/flutter-action@v1
+        with:
+          channel: 'dev'
+      - name: Enable flutter web
+        run: flutter config --enable-web
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Build web app
+        run: |
+          flutter build web --release --dart-define=FLUTTER_WEB_USE_EXPERIMENTAL_CANVAS_TEXT=true
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
