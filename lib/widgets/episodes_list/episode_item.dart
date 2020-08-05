@@ -27,7 +27,7 @@ class EpisodeItem extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 15.0,
+                horizontal: 15,
                 vertical: 20,
               ),
               child: Column(
