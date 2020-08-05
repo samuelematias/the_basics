@@ -24,7 +24,7 @@ class EpisodeDetails extends StatelessWidget {
                     ),
                   ),
             model.episode == null
-                ? CircularProgressIndicator()
+                ? Center(child: CircularProgressIndicator())
                 : Text(
                     model.episode.title,
                     style: TextStyle(fontSize: 60),

@@ -22,6 +22,11 @@ class NavigationDrawer extends StatelessWidget {
           // BONUS: Combine the UI for this widget with the NavBarItem and make it responsive.
           // The UI for the current DrawerItem shows when it's in mobile, else it shows the NavBarItem ui.
           NavBarItem(
+            'Home',
+            HomeRoute,
+            icon: Icons.home,
+          ),
+          NavBarItem(
             'Episodes',
             EpisodesRoute,
             icon: Icons.videocam,
