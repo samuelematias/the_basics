@@ -5,7 +5,9 @@ import 'package:the_basics/widgets/navigation_drawer/navigation_drawer_header.da
 import 'package:theme_provider/theme_provider.dart';
 
 class NavigationDrawer extends StatelessWidget {
-  const NavigationDrawer({Key key}) : super(key: key);
+  const NavigationDrawer({Key key, this.scaffoldKey}) : super(key: key);
+
+  final GlobalKey<ScaffoldState> scaffoldKey;
 
   @override
   Widget build(BuildContext context) {
@@ -28,16 +30,19 @@ class NavigationDrawer extends StatelessWidget {
             'Home',
             HomeRoute,
             icon: Icons.home,
+            scaffoldKey: scaffoldKey,
           ),
           NavBarItem(
             'Episodes',
             EpisodesRoute,
             icon: Icons.videocam,
+            scaffoldKey: scaffoldKey,
           ),
           NavBarItem(
             'About',
             AboutRoute,
             icon: Icons.help,
+            scaffoldKey: scaffoldKey,
           ),
         ],
       ),

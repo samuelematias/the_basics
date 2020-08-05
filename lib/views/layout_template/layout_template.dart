@@ -15,7 +15,11 @@ class LayoutTemplate extends StatelessWidget {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Scaffold(
         key: _scaffoldKey,
-        drawer: sizingInformation.isMobile ? NavigationDrawer() : null,
+        drawer: sizingInformation.isMobile
+            ? NavigationDrawer(
+                scaffoldKey: _scaffoldKey,
+              )
+            : null,
         // backgroundColor: Colors.white,
         body: CenteredView(
           child: Column(
