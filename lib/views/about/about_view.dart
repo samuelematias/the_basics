@@ -4,6 +4,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:the_basics/styles/text_styles.dart';
 import 'package:the_basics/utils/hyperlink.dart';
 import 'package:the_basics/widgets/list_view_column/list_view_column.dart';
+import 'package:theme_provider/theme_provider.dart';
 
 class AboutView extends StatelessWidget {
   const AboutView({Key key}) : super(key: key);
@@ -32,7 +33,9 @@ class AboutView extends StatelessWidget {
               message: 'Access Github project page',
               child: Icon(
                 AntDesign.github,
-                color: Colors.black,
+                color: ThemeProvider.themeOf(context).id == 'dark'
+                    ? Colors.white
+                    : Colors.black,
                 size: 50,
               ),
             ),

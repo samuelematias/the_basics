@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:theme_provider/theme_provider.dart';
 
 class NavigationBarMobile extends StatelessWidget {
   const NavigationBarMobile({Key key, this.scaffoldKey}) : super(key: key);
@@ -19,6 +20,7 @@ class NavigationBarMobile extends StatelessWidget {
               scaffoldKey?.currentState?.openDrawer();
             },
           ),
+          CycleThemeIconButton(),
         ],
       ),
     );

@@ -11,7 +11,6 @@ class EpisodeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.white,
       elevation: 2,
       child: SizedBox(
         width: 360,
@@ -20,9 +19,11 @@ class EpisodeItem extends StatelessWidget {
           children: <Widget>[
             SizedBox(
               height: 180,
-              child: Image.network(
-                model.imageUrl,
+              child: FadeInImage.assetNetwork(
+                placeholder: 'assets/img-placeholder.png', // Before image load
+                image: model.imageUrl, // After image load
                 fit: BoxFit.cover,
+                alignment: Alignment.center,
               ),
             ),
             Padding(
