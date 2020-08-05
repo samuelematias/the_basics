@@ -6,6 +6,7 @@ import 'package:the_basics/locator.dart';
 import 'package:the_basics/services/navigation_service.dart';
 import 'package:the_basics/widgets/navbar_item/navbar_item_desktop.dart';
 import 'package:the_basics/widgets/navbar_item/navbar_item_mobile.dart';
+import 'package:the_basics/extensions/hover_extensions.dart';
 
 class NavBarItem extends StatelessWidget {
   final String title;
@@ -31,7 +32,7 @@ class NavBarItem extends StatelessWidget {
         child: ScreenTypeLayout(
           tablet: NavBarItemTabletDesktop(),
           mobile: NavBarItemMobile(),
-        ),
+        ).moveUpOnHover,
       ),
     );
   }
